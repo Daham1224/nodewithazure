@@ -25,7 +25,7 @@ var port = process.env.PORT || 3000;
 
 var server = http.createServer(app);
 server.listen(port);
-
+console.log("tests");
 
 var io = require('socket.io').listen(server);
 io.sockets.on('connection',function(socket){
@@ -49,5 +49,6 @@ io.sockets.on('connection',function(socket){
                 }
             });
         }
-    })
+    });
+
 });
